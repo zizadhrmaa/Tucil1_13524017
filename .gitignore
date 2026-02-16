@@ -1,0 +1,13 @@
+build/
+bin/
+*.user
+.vscode/
+.idea/
+compile_commands.json
+*.autosave
+*.pro.user*
+CMakeCache.txt
+CMakeFiles/
+.DS_Store
+test/*
+!test/.gitkeep
