@@ -31,13 +31,18 @@ private:
 
     BoardWidget* m_board = nullptr;
     QLabel* m_status = nullptr;
-    QLabel* m_stats = nullptr;
+    QLabel* m_statsCases = nullptr;
+    QLabel* m_statsTime = nullptr;
     QPushButton* m_btnSolve = nullptr;
-    QPushButton* m_btnCancel = nullptr;
+    QPushButton* m_btnOpenTxt = nullptr;
+    QPushButton* m_btnOpenImg = nullptr;
+    QPushButton* m_btnExportTxt = nullptr;
+    QPushButton* m_btnExportImg = nullptr;
     QCheckBox* m_chkOptimized = nullptr;
 
     Puzzle m_current;
     SolveStats m_lastStats;
     QThread m_workerThread;
     Solver* m_solver = nullptr;
+    bool m_solving = false;
 };
