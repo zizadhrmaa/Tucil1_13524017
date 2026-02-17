@@ -351,10 +351,9 @@ void MainWindow::onSolve() {
 void MainWindow::onCancel() {
     m_status->setText("Membatalkan...");
     if (m_solver) {
-        QMetaObject::invokeMethod(m_solver, "cancel", Qt::QueuedConnection);
+        m_solver->cancel();
     }
 }
-
 void MainWindow::onExportTxt() {
     if (!m_current.isValid()) {
         QMessageBox::information(this, "Info", "Belum ada solusi.");
