@@ -46,12 +46,15 @@ void BoardWidget::paintEvent(QPaintEvent*) {
             p.fillRect(rect, col);
             p.setPen(QPen(Qt::black, 1));
             p.drawRect(rect);
-
             if (m_pz.queen[r][c]) {
-                p.setPen(QPen(Qt::black, std::max(2, cell/18)));
-                p.drawEllipse(rect.adjusted(cell/5, cell/5, -cell/5, -cell/5));
-                p.drawLine(rect.center().x(), rect.top()+cell/5, 
-                          rect.center().x(), rect.bottom()-cell/5);
+                p.setPen(QPen(QColor("#FFD700"), 1));
+                p.setBrush(QColor("#FFD700"));
+                QFont f = p.font();
+                f.setPixelSize(cell * 0.6);
+                f.setBold(true);
+                p.setFont(f);
+                p.drawText(rect, Qt::AlignCenter, "♛");
+                p.setBrush(Qt::NoBrush);
             }
         }
     }

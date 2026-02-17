@@ -7,13 +7,13 @@
 
 static QColor niceColor(int i) {
     static std::vector<QColor> palette = {
-        QColor("#E2E8F0"), QColor("#FDE68A"), QColor("#A7F3D0"), QColor("#BFDBFE"),
-        QColor("#FBCFE8"), QColor("#DDD6FE"), QColor("#FCA5A5"), QColor("#C7D2FE"),
-        QColor("#FCD34D"), QColor("#86EFAC"), QColor("#FF6B6B"), QColor("#4ECDC4"),
-        QColor("#45B7D1"), QColor("#FFA07A"), QColor("#98D8C8"), QColor("#F7DC6F"),
-        QColor("#BB8FCE"), QColor("#85C1E2"), QColor("#F8B88B"), QColor("#A8E6CF"),
-        QColor("#FFD3B6"), QColor("#FFAAA5"), QColor("#FF8B94"), QColor("#A8DADC"),
-        QColor("#457B9D"), QColor("#1D3557")
+        QColor("#94A3B8"), QColor("#6EE7B7"), QColor("#93C5FD"), QColor("#F9A8D4"),
+        QColor("#C4B5FD"), QColor("#FCA5A5"), QColor("#67E8F9"), QColor("#86EFAC"),
+        QColor("#FF6B6B"), QColor("#4ECDC4"), QColor("#45B7D1"), QColor("#BB8FCE"),
+        QColor("#F97316"), QColor("#98D8C8"), QColor("#A78BFA"), QColor("#34D399"),
+        QColor("#FB7185"), QColor("#38BDF8"), QColor("#A3E635"), QColor("#E879F9"),
+        QColor("#2DD4BF"), QColor("#457B9D"), QColor("#1D3557"), QColor("#166534"),
+        QColor("#7C3AED"), QColor("#9F1239")
     };
     return palette[i % (int)palette.size()];
 }
@@ -363,12 +363,15 @@ bool ImageIO::saveSolutionImage(const QString& path, const Puzzle& pz, QString* 
             p.fillRect(rect, col);
             p.setPen(QPen(Qt::black, 1));
             p.drawRect(rect);
-
             if (pz.queen[r][c]) {
-                p.setPen(QPen(Qt::black, 3));
-                p.drawEllipse(rect.adjusted(12,12,-12,-12));
-                p.drawLine(rect.center().x(), rect.top()+12, 
-                          rect.center().x(), rect.bottom()-12);
+                p.setPen(QPen(QColor("#FFD700"), 1));
+                p.setBrush(QColor("#FFD700"));
+                QFont f = p.font();
+                f.setPixelSize(cell * 0.6);
+                f.setBold(true);
+                p.setFont(f);
+                p.drawText(rect, Qt::AlignCenter, "♛");
+                p.setBrush(Qt::NoBrush);
             }
         }
     }
