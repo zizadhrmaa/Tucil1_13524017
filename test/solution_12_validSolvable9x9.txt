@@ -1,0 +1,12 @@
+#ABBBCCCD
+AA#BCCCDD
+ABBB#CDDD
+BBBCCC#DE
+F#FCCDDDE
+FFF#GDDEE
+FFFGGHH#E
+FFGGG#HII
+FGGGHHHI#
+
+Waktu pencarian: 17946 ms
+Banyak kasus yang ditinjau: 13562289 kasus

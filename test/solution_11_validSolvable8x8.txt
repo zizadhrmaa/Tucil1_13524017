@@ -1,0 +1,11 @@
+AAABBBCC
+AAABBCCC
+AABBBCCD
+EEBBCCCD
+EEFFCCDD
+EEFFGGDD
+EFFFGGHH
+FFFGGGHH
+
+Waktu pencarian: 1346 ms
+Banyak kasus yang ditinjau: 1094412 kasus
