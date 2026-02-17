@@ -18,11 +18,15 @@ add_executable(Tucil1_13524017
     src/ImageIO.h src/ImageIO.cpp
 )
 
-target_link_libraries(Tucil1_13524017 PRIVATE Qt6::Widgets Qt6::Gui)
+add_executable(txt2img src/txt2img.cpp)
 
-# Optional: nicer warnings
+target_link_libraries(Tucil1_13524017 PRIVATE Qt6::Widgets Qt6::Gui)
+target_link_libraries(txt2img PRIVATE Qt6::Widgets Qt6::Gui)
+
 if (MSVC)
   target_compile_options(Tucil1_13524017 PRIVATE /W4)
+  target_compile_options(txt2img PRIVATE /W4)
 else()
   target_compile_options(Tucil1_13524017 PRIVATE -Wall -Wextra -Wpedantic)
+  target_compile_options(txt2img PRIVATE -Wall -Wextra -Wpedantic)
 endif()
