@@ -71,17 +71,21 @@ make run
 ### Menggunakan Program
 
 1. **Load Puzzle**:
-   - Klik "Open .txt" untuk membuka file puzzle format teks
-   - Klik "Open Image" untuk membuka puzzle dari gambar
+   - Klik "Buka file .txt" untuk membuka file puzzle format teks
+   - Klik "Buka gambar" untuk membuka puzzle dari gambar
 
 2. **Solve Puzzle**:
-   - Pilih mode: Pure Brute Force atau Optimized Backtracking
-   - Klik "Solve (Brute Force)"
+   - Klik checkbox "Optimasi" apabila ingin proses dipercepat
+   - Klik "Selesaikan (Metode Brute Force)"
    - Lihat progress solving secara real-time
 
-3. **Export Solusi**:
-   - Klik "Export Solution TXT" untuk menyimpan sebagai .txt
-   - Klik "Export Solution PNG" untuk menyimpan sebagai gambar
+2. **Cancel**:
+   - Setelah klik "Selesaikan (Metode Brute Force)" tombol akan berubah tugas sebagai tombol batal "Batalkan pencarian".
+     Klik tombol "Batalkan pencarian" apabila ingin menghentikan proses pencarian solusi.
+
+4. **Export Solusi**:
+   - Klik "Simpan file .txt" untuk menyimpan sebagai .txt
+   - Klik "Simpan gambar" untuk menyimpan sebagai gambar
 
 ### Format Input File .txt
 ```
@@ -95,6 +99,8 @@ DDFFC
 - Setiap huruf merepresentasikan region (A-Z)
 - Papan harus NxN
 - Jumlah region harus tepat N
+- Maksimal N adalah 26
+- Penulisan huruf tidak dipisahkan spasi
 
 ### Format Input Gambar
 

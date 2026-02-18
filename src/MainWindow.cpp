@@ -50,9 +50,9 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent) {
 
     auto* hUpload = new QHBoxLayout();
     hUpload->setSpacing(10);
-    m_btnOpenTxt = new QPushButton("File .txt", panel);
+    m_btnOpenTxt = new QPushButton("Buka file .txt", panel);
     m_btnOpenTxt->setObjectName("outlineBtn");
-    m_btnOpenImg = new QPushButton("File image", panel);
+    m_btnOpenImg = new QPushButton("Buka gambar", panel);
     m_btnOpenImg->setObjectName("outlineBtn");
     hUpload->addWidget(m_btnOpenTxt);
     hUpload->addWidget(m_btnOpenImg);
@@ -71,7 +71,7 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent) {
     m_chkOptimized->setChecked(false);
     pv->addWidget(m_chkOptimized);
 
-    m_btnSolve = new QPushButton("Metode Brute Force", panel);
+    m_btnSolve = new QPushButton("Selesaikan (Metode Brute Force)", panel);
     m_btnSolve->setObjectName("solveBtn");
     m_btnSolve->setFixedHeight(44);
     m_btnSolve->setEnabled(false);
@@ -108,9 +108,9 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent) {
 
     auto* hSave = new QHBoxLayout();
     hSave->setSpacing(10);
-    m_btnExportTxt = new QPushButton("File .txt", panel);
+    m_btnExportTxt = new QPushButton("Simpan file .txt", panel);
     m_btnExportTxt->setObjectName("outlineBtn");
-    m_btnExportImg = new QPushButton("File image", panel);
+    m_btnExportImg = new QPushButton("Simpan gambar", panel);
     m_btnExportImg->setObjectName("outlineBtn");
     hSave->addWidget(m_btnExportTxt);
     hSave->addWidget(m_btnExportImg);
@@ -276,7 +276,7 @@ void MainWindow::setUiEnabled(bool enabled) {
             "QPushButton:hover { background-color: #8B3A50; }"
         );
     } else {
-        m_btnSolve->setText("Metode Brute Force");
+        m_btnSolve->setText("Selesaikan (Metode Brute Force)");
         m_btnSolve->setObjectName("solveBtn");
         m_btnSolve->setStyleSheet("");
         m_btnSolve->setEnabled(m_current.isValid());
