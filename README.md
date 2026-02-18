@@ -124,6 +124,7 @@ DDFFC
 │   ├── Puzzle.h/cpp        # Puzzle data structure
 │   ├── Solver.h/cpp        # Solving algorithms
 │   └── ImageIO.h/cpp       # File I/O handler
+│   └── txt2img.cpp         # Change txt to png
 ├── test/                   # Test puzzles
 ├── doc/                    # Documentation
 ├── build/                  # Build files (generated)
